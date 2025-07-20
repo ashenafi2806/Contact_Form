@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import { MdOutlineFormatColorReset } from "react-icons/md";
 import "./contactform.css";
 
@@ -15,7 +14,6 @@ export default function ContactForm() {
 
   const {
     register,
-    control,
     handleSubmit,
     formState: { errors, isValid },
     watch,
@@ -158,7 +156,7 @@ export default function ContactForm() {
         {isSuccessful && "The form was submitted successfully!"}
       </p>
 
-      <DevTool control={control} />
+     
     </div>
   );
 }
